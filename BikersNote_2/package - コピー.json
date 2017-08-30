@@ -1,0 +1,48 @@
+{
+  "name": "phonegap-template-hello-world",
+  "version": "4.0.3",
+  "description": "> A Hello World template built with PhoneGap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/phonegap-app-hello-world.git"
+  },
+  "author": "PhoneGap Team",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/phonegap/phonegap-app-hello-world/issues"
+  },
+  "homepage": "https://github.com/phonegap/phonegap-app-hello-world",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p .",
+    "bundle": "webpack src/main.js www/js/bundle.js",
+    "build": "npm run bundle",
+    "start": "static .",
+    "postinstall": "cpx node_modules/onsenui/**/* www/lib/onsenui",
+    "postbuild": "cpx src/**/*.html www/src"
+  },
+  "dependencies": {
+    "@angular/common": "^2.2.4",
+    "@angular/compiler": "^2.2.4",
+    "@angular/core": "^2.2.4",
+    "@angular/platform-browser": "^2.2.4",
+    "@angular/platform-browser-dynamic": "^2.2.4",
+    "angular2-onsenui": "1.0.0-rc.2",
+    "core-js": "^2.4.1",
+    "onsenui": "^2.0.4",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.21",
+    "cpx": "^1.5.0"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.9",
+    "typescript": "^2.0.10",
+    "webpack": "^1.13.3"
+  }
+}
